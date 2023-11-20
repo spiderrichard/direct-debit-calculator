@@ -1,0 +1,153 @@
+body {
+    background-color: rgb(38, 3, 79);
+    font-size: 20px;
+    color: white;
+    font-family: Arial;
+}
+
+.full-page-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 1000px;
+    height: 100%;
+}
+
+h3 {
+    color: grey;
+    font-size: 13px;
+    margin-bottom: 5px
+}
+.instructions-div {
+    border-radius: 10px;
+    background-color: rgb(29, 3, 59);
+    margin-bottom: 20px;
+    height: auto;
+    padding: 20px 200px;
+    text-align: center;
+}
+
+.dropdown-selectors-div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-bottom: 20px;
+}
+
+.tariff-dropdown-menu {
+    background-color: rgb(29, 3, 59);
+    color: white;
+    border-color: blueviolet;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+}
+
+.gsp-dropdown-menu {
+    background-color: rgb(29, 3, 59);
+    color: white;
+    border-color: blueviolet;
+    font-size: 20px;
+    height: 50px;
+}
+
+.input-boxes-div {
+    border-radius: 10px;
+    background-color: rgb(29, 3, 59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.input-boxes-table {
+   margin: 0 auto;
+   width: 600px;
+   height: 350px;
+}
+
+input {
+    text-align: center;
+    color: white;
+    background-color: rgb(23, 1, 48);
+    border-color: blueviolet;
+    font-size: 25px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.left-label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.right-label {
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.calculate-button-div {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calculate-button {
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 23, 247);
+    cursor: pointer;
+    opacity: 1;
+}
+.calculate-button:hover {
+    background-color: rgba(255, 23, 247, 0.502);
+}
+
+.reset-button {
+    text-align: center;
+    color: white;
+    background-color: rgb(23, 1, 48);
+    border-color: blueviolet;
+    font-size: 25px;
+    width: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.reset-button:hover {
+    background-color: rgba(255, 23, 247, 0.502);
+}
+
+.results-div {
+    border-radius: 10px;
+    background-color: rgb(29, 3, 59);
+    margin-top: 20px;
+    padding: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.monthly-direct-debit-label {
+    width: 450px;
+    text-align: Left;
+    font-size: 25px;
+}
+
+.monthly-direct-debit-result {
+    background-color: rgb(23, 1, 48);
+    border-color: blueviolet;
+    border-radius: 10px;
+    width: 250px;
+    height: auto;
+    padding-right: 0px;
+    text-align: center;
+    font-size: 25px;
+}

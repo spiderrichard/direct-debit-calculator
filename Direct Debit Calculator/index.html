@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Octopus Energy Tariff</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+<div class="full-page-div">
+
+<div class="instructions-div">
+  <h2>Direct Debit Calculator</h2>
+  <p>Enter your usage figures for gas and electric for the year and your current unit rates to see what we suggest you set your direct debit to.</p>
+</div>
+
+<div class="dropdown-selectors-div">
+    
+  <select class="tariff-dropdown-menu" id="tariff-selector" onchange="tariffSelector()">
+    <option value="select-tariff">Select Tariff</option>
+    <option value="https://api.octopus.energy/v1/products/VAR-23-10-01/">Flexible Octopus</option>
+    <option value="https://api.octopus.energy/v1/products/COOP-VAR-22-10-01">Co-op Flexible</option>
+    <option value="https://api.octopus.energy/v1/products/COSY-22-12-08">Cosy Octopus</option>
+    <option value="https://api.octopus.energy/v1/products/SILVER-FLEX-22-11-25">Octopus Tracker</option>
+  </select>
+  
+  <select class="gsp-dropdown-menu" id="gsp-selector" onchange="gspSelector()">
+    <option value="select-gsp">Select GSP</option>
+    <option value="_A">Eastern (_A)</option>
+    <option value="_B">East Midlands (_B)</option>
+    <option value="_C">London (_C)</option>
+    <option value="_D">Merseyside and North Wales (_D)</option>
+    <option value="_E">Midlands (_E)</option>
+    <option value="_F">Northern (_F)</option>
+    <option value="_G">North Western (_G)</option>
+    <option value="_H">Southern (_H)</option>
+    <option value="_J">South Eastern (_J)</option>
+    <option value="_K">South Wales (_K)</option>
+    <option value="_L">South Western (_L)</option>
+    <option value="_M">Yorkshire (_M)</option>
+    <option value="_N">South Scotland (_N)</option>
+    <option value="_P">North Scotland (_P)</option>
+  </select>
+
+</div>
+
+<div class="input-boxes-div">
+
+  <form onsubmit="calculateDirectDebit(event)">
+    
+    <table class="input-boxes-table">
+      <tr>
+        <td class="left-label">
+					<label for="electric-eac">Electric EAC:</span></label><br>
+          <h3>Eg: for 2900kWh enter 2900 below</h3>
+					<input type="text" placeholder="0000" id="electric-eac" name="electric-eac"><br>
+				</td>
+			  <td class="right-label" >
+					<label for="gas-aq">Gas AQ:</span></label><br>
+          <h3>Eg: for 12000kWh enter 12000 below</h3>
+					<input type="text" placeholder="00000" id="gas-aq" name="gas-aq">
+				</td>
+      </tr>
+      <tr>
+        <td class="left-label">
+          <label for="electric-unit-rate">Electric Unit Rate:</label><br>
+          <h3>Eg: for 33.67p/kWh enter 33.67 below</h3>
+          <input type="text" placeholder="00.00" id="electric-unit-rate"><br>
+        </td>
+        <td class="right-label" >
+          <label for="gas-unit-rate">Gas Unit Rate:</label><br>
+          <h3>Eg: for 10.41p/kWh enter 10.41 below</h3>
+          <input type="text" placeholder="00.00" id="gas-unit-rate"><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="left-label">
+          <label for="electric-standing-charge">Electric Standing Charge:</label><br>
+          <h3>Eg: for 46.67p/day enter 46.67 below</h3>
+          <input type="text" placeholder="00.00" id="electric-standing-charge"><br>
+        </td>
+        <td class="right-label">
+          <label for="gas-standing-charge">Gas Standing Charge:</label><br>
+          <h3>Eg: for 26.67p/day enter 26.67 below</h3>
+          <input type="text" placeholder="00.00" id="gas-standing-charge"><br>
+        </td>
+      </tr>
+    </table>
+
+</div>
+
+<div class="calculate-button-div">
+  
+  <input class="calculate-button" type="submit" value="Calculate"></input>
+  <button class="reset-button" onclick="clearTextboxes()">Reset</button>
+
+</div>
+
+<div class="results-div">
+    
+   <table class="results-table">
+    <table>
+      <tr>
+        <td class="monthly-direct-debit-label"><p class="result">Monthly Direct Debit:</p></td>
+       <td class="monthly-direct-debit-result"><span id="total"></span></td> 
+     </tr>
+      <tr>
+        <td class="monthly-direct-debit-label"><p class="result">Total Electricity Per Year:</p></td>
+        <td class="monthly-direct-debit-result"><span id="electricTotal"></span></td> 
+      </tr>
+      <tr>
+        <td class="monthly-direct-debit-label"><p class="result">Total Gas Per Year:</p></td>
+        <td class="monthly-direct-debit-result"><span id="gasTotal"></span></td> 
+      </tr> 
+
+    </table>
+  </form>
+
+</div>
+
+</div>
+
+    <script src="dropdown-selectors.js"></script>
+    <script src="direct-debit-calc.js"></script>
+    <script src="page-reset.js"></script>
+
+</body>
+</html>
